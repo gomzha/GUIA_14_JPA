@@ -1,24 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Entidad;
+package com.gomzha.entidad;
 
+import javax.persistence.*;
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-
-/**
- *
- * @author A308443
- */
 
 @Entity
-public class Autor implements Serializable {
-
+@Table(name = "autor")
+public class Autor  implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -52,7 +39,7 @@ public class Autor implements Serializable {
     public void setAlta(boolean alta) {
         this.alta = alta;
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -78,6 +65,6 @@ public class Autor implements Serializable {
         return "Autor{" + "id=" + id + ", nombre=" + nombre + ", alta=" + alta + '}';
     }
 
-    
-    
+
+
 }
